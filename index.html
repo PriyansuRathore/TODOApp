@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow - Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <div class="login-header">
+      <div class="logo-icon">📝</div>
+      <h1 class="main-title">TaskFlow</h1>
+      <p class="subtitle">Turn chaos into clarity, one task at a time ✨</p>
+      <hr class="divider" />
+      <p class="verification-text">
+        <span class="verification-icon">✔</span>
+        Age verification is required
+      </p>
+    </div>
+
+    <div class="login-card">
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input class="form-input" type="text" id="name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input class="form-input" type="date" id="dob" required />
+        </div>
+
+        <button type="submit" class="submit-button">
+          <span class="submit-text">Start Organizing 🚀</span>
+        </button>
+        <p id="error" class="error-message" style="display: none;"></p>
+      </form>
+    </div>
+
+    <p class="legal-notice">
+      By continuing, you confirm that you are over 10 years old and agree to our terms of service.
+    </p>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

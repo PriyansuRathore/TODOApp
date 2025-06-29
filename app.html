@@ -1,0 +1,99 @@
+<!-- app.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow - Todo App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body class="todo-body">
+  <header class="todo-header">
+    <div class="app-title">MY TODO APP</div>
+    <div class="header-right">
+      <label class="theme-toggle" title="Toggle theme">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider">
+          <span class="icon moon">🌙</span>
+          <span class="icon sun">🌞</span>
+        </span>
+      </label>
+      <span id="username" class="user-name"></span>
+      <button id="signout" class="signout-button">Sign Out</button>
+    </div>
+  </header>
+
+  <main class="todo-main">
+    <!-- Progress Meter
+    <div class="circle-progress-wrapper">
+      <div class="circle-progress">
+        <svg>
+          <circle cx="50" cy="50" r="45"></circle>
+          <circle id="progressCircle" cx="50" cy="50" r="45"></circle>
+        </svg>
+        <div class="progress-value" id="progressValue">0%</div>
+      </div>
+    </div> -->
+
+    <div id="stage-tabs" class="stage-tabs">
+      <button class="tab active" data-stage="todo">Todo (<span id="todoCount">0</span>)</button>
+      <button class="tab" data-stage="completed">Completed (<span id="completedCount">0</span>)</button>
+      <button class="tab" data-stage="archived">Archived (<span id="archivedCount">0</span>)</button>
+    </div>
+
+    <div class="priority-filters">
+      <button class="filter-btn active" data-priority="all">All</button>
+      <button class="filter-btn" data-priority="high">🔴 High</button>
+      <button class="filter-btn" data-priority="medium">🟡 Medium</button>
+      <button class="filter-btn" data-priority="low">🟢 Low</button>
+    </div>
+
+    <div id="search-input" class="task-input-area" style="margin-bottom: 1rem;">
+      <input type="text" id="searchInput" class="task-input" placeholder="🔍 Search tasks..." />
+    </div>
+
+    <div id="task-input" class="task-input-area">
+      <input type="text" id="taskInput" class="task-input" placeholder="Add your task here" />
+      <select id="prioritySelect" class="priority-select">
+        <option value="low">🟢 Low</option>
+        <option value="medium" selected>🟡 Medium</option>
+        <option value="high">🔴 High</option>
+      </select>
+      <button id="addTask" class="add-task-button">Submit</button>
+    </div>
+
+    <div class="data-controls">
+      <button id="exportData" class="data-btn">📤 Export</button>
+      <input type="file" id="importFile" accept=".json" style="display: none;" />
+      <button id="importData" class="data-btn">📥 Import</button>
+    </div>
+
+    <div id="task-list" class="task-list"></div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Theme Toggle Logic
+    const themeSwitch = document.getElementById("themeSwitch");
+    const root = document.documentElement;
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      root.classList.add("light");
+      themeSwitch.checked = true;
+    }
+
+    themeSwitch.addEventListener("change", () => {
+      if (themeSwitch.checked) {
+        root.classList.add("light");
+        localStorage.setItem("theme", "light");
+      } else {
+        root.classList.remove("light");
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  </script>
+</body>
+</html>
