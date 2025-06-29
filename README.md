@@ -6,7 +6,7 @@ A modern, feature-rich todo application with age verification, priority manageme
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-username.github.io/TaskFlow) *(Update with your GitHub Pages URL)*
+[View Live Demo](https://priyansuRathore.github.io/TODOApp/)
 
 ## ✨ Features
 
@@ -43,7 +43,7 @@ A modern, feature-rich todo application with age verification, priority manageme
 ## 📁 Project Structure
 
 ```
-TaskFlow/
+TODOApp/
 ├── index.html          # Login/Registration page
 ├── app.html           # Main todo application
 ├── css/
@@ -58,8 +58,8 @@ TaskFlow/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/TaskFlow.git
-   cd TaskFlow
+   git clone https://github.com/PriyansuRathore/TODOApp.git
+   cd TODOApp
    ```
 
 2. **Open in browser**
@@ -82,17 +82,6 @@ TaskFlow/
 | `Ctrl + E` | Export data |
 | `Ctrl + I` | Import data |
 | `Ctrl + ?` | Show shortcuts help |
-
-## 🎨 Screenshots
-
-### Login Page
-![Login Page](screenshots/login.png)
-
-### Main Dashboard
-![Dashboard](screenshots/dashboard.png)
-
-### Mobile View
-![Mobile View](screenshots/mobile.png)
 
 ## 🔧 Features in Detail
 
@@ -133,12 +122,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [DummyJSON](https://dummyjson.com/) for providing dummy task data
 - [Google Fonts](https://fonts.google.com/) for the Inter font family
 - [Canvas Confetti](https://github.com/catdad/canvas-confetti) for celebration animations
-
-## 📧 Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - your.email@example.com
-
-Project Link: [https://github.com/your-username/TaskFlow](https://github.com/your-username/TaskFlow)
 
 ---
 
